@@ -1,0 +1,29 @@
+/* .dcd {
+    text-transform: capitalize;
+} */
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background-color: #99d2d5;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #429398;
+}

@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import css from './FeedbackOptions.module.css';
 
 export function FeedbackOptions({ options, onLeaveFeedback }) {
     return (
-        <ul>
+        <ul className={css.list}>
             {options.map(item => {
                 return (
-                    <li key={item}>
-                        <button type="button" onClick={onLeaveFeedback}>
+                    <li className={css.item} key={item}>
+                        <button className={css.btn} type="button" onClick={onLeaveFeedback}>
                             {item}
                         </button>
                     </li>
