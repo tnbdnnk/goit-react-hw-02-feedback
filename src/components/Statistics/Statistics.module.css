@@ -1,9 +1,8 @@
 .list__statistics {
     display: flex;
     flex-wrap: wrap;
-    /* background-color: #e2eff2; */
     list-style: none;
-    /* font-style: italic; */
+    gap: 8px;
 }
 
 .list__item {
@@ -12,6 +11,6 @@
 }
 
 .list__span {
-    padding-left: 10px;
+    padding-left: 20px;
     font-weight: 600;
 }

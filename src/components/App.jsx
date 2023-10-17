@@ -40,7 +40,7 @@ export class App extends Component {
                     />}
                 />
                 <Section
-                    title="Statistics"
+                    title="Statistics:"
                     children={
                         <>
                             {this.countTotalFeedback() === 0 ? (
