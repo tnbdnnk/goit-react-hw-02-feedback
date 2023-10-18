@@ -32,31 +32,27 @@ export class App extends Component {
     render() {
         return (
             <div className={css.container}>
-                <Section 
-                    title="Please leave feedback"
-                    children={<FeedbackOptions 
+                <Section title="Please leave feedback">
+                    <FeedbackOptions 
                         options={Object.keys(this.state)} 
                         onLeaveFeedback={this.onLeaveFeedback}
-                    />}
-                />
-                <Section
-                    title="Statistics:"
-                    children={
-                        <>
-                            {this.countTotalFeedback() === 0 ? (
-                                <Notification message="There is no feedback"/>
-                            ) : (
-                                <Statistics
-                                    good={this.state.good}
-                                    neutral={this.state.neutral}
-                                    bad={this.state.bad}
-                                    total={this.countTotalFeedback()}
-                                    positivePercentage={this.countPositiveFeedbackPercentage()}
-                                />
-                            )}
-                        </>
-                    }
-                />
+                    />
+                </Section>
+                <Section title="Statistics:">
+                    <>
+                        {this.countTotalFeedback() === 0 ? (
+                            <Notification message="There is no feedback"/>
+                        ) : (
+                            <Statistics
+                                good={this.state.good}
+                                neutral={this.state.neutral}
+                                bad={this.state.bad}
+                                total={this.countTotalFeedback()}
+                                positivePercentage={this.countPositiveFeedbackPercentage()}
+                            />
+                        )}
+                    </>
+                </Section>
             </div>
         )
     }
